@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="fr" style="color-scheme: dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'Amuse Bouche · Brasserie bistronomique à Saint-Gratien, face à la gare</title>
+<meta name="description" content="Brasserie bistronomique à Saint-Gratien : cuisine faite maison, petit-déjeuner & brunch, terrasse ensoleillée, cocktails et soirées musique live. Ouvert 7j/7 de 7h à minuit. Réservation en ligne.">
+<meta name="theme-color" content="#120d09">
+<link rel="canonical" href="https://lamuse-bouche.vercel.app/">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="L'Amuse Bouche · Bistrot chic à Saint-Gratien">
+<meta property="og:description" content="Plats faits maison, petit-déjeuner, cocktails & musique live face à la gare de Saint-Gratien. Ouvert 7j/7 de 7h à minuit.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=70">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120d09'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='%23d4a056'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          noir:   { DEFAULT: '#120d09', 2: '#1a130e', 3: '#241a13' },
+          cuivre: { DEFAULT: '#b8733e', light: '#d08a52', dark: '#8a5129' },
+          ambre:  { DEFAULT: '#d4a056', soft: '#e8c48a' },
+          creme:  { DEFAULT: '#f3e7d3', dim: '#c9b9a0' },
+          bordeaux: '#6e1f22',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+          hand: ['Caveat', 'cursive'],
+        },
+      }
+    }
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "L'Amuse Bouche",
+  "description": "Brasserie française conviviale : cuisine bistronomique faite maison, petit-déjeuner & brunch, terrasse ensoleillée, cocktails et soirées musique live.",
+  "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=70",
+  "telephone": "+33139897155",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2 Boulevard de la Gare",
+    "addressLocality": "Saint-Gratien",
+    "postalCode": "95210",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "23:59"
+  }],
+  "servesCuisine": ["Française", "Bistronomique", "Brasserie", "Brunch"],
+  "priceRange": "€€",
+  "acceptsReservations": "True",
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Terrasse", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Wifi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Musique live", "value": true}
+  ],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "bestRating": "5", "reviewCount": "918"}
+}
+</script>
+
+<style>
+  :root {
+    --noir: #120d09; --noir2: #1a130e; --cuivre: #b8733e; --ambre: #d4a056; --creme: #f3e7d3;
+    --glass: rgba(36, 26, 19, .55);
+    --line: rgba(212, 160, 86, .22);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { background: var(--noir); color: var(--creme); -webkit-font-smoothing: antialiased; }
+  a, button, label { touch-action: manipulation; }
+  :where(a, button, [role="tab"]):focus-visible { outline: 2px solid var(--ambre); outline-offset: 3px; border-radius: 999px; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  ::selection { background: var(--ambre); color: var(--noir); }
+
+  /* Grain chaud sur toute la page */
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .07; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .font-display { font-variation-settings: "SOFT" 60, "WONK" 1; }
+
+  /* Verre ambré */
+  .glass {
+    background: linear-gradient(160deg, rgba(58, 40, 26, .62), rgba(22, 16, 11, .72));
+    border: 1px solid var(--line);
+    backdrop-filter: blur(14px) saturate(130%);
+    -webkit-backdrop-filter: blur(14px) saturate(130%);
+    box-shadow: inset 0 1px 0 rgba(243, 231, 211, .06), 0 30px 60px -30px rgba(0,0,0,.8);
+  }
+  .glow { box-shadow: 0 0 0 1px rgba(212,160,86,.25), 0 20px 50px -18px rgba(208,138,82,.45); }
+
+  /* Filet doré façon carte de brasserie */
+  .rule { height: 1px; background: linear-gradient(90deg, transparent, var(--ambre), transparent); opacity: .5; }
+  .leader { flex: 1; border-bottom: 1px dotted rgba(212,160,86,.45); transform: translateY(-5px); margin: 0 .6rem; min-width: 1.5rem; }
+
+  /* Tilt 3D */
+  .tilt { transform-style: preserve-3d; transition: transform .5s cubic-bezier(.2,.8,.2,1); will-change: transform; position: relative; }
+  .tilt.is-tilting { transition: transform .08s linear; }
+  .tilt .lift { transform: translateZ(40px); }
+  .tilt .lift-sm { transform: translateZ(22px); }
+  .tilt .glare {
+    position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+    background: radial-gradient(circle at var(--gx,50%) var(--gy,50%), rgba(255,214,150,.28), transparent 55%);
+    mix-blend-mode: soft-light;
+  }
+  .tilt:hover .glare { opacity: 1; }
+
+  /* Parallaxe */
+  [data-speed] { will-change: transform; }
+
+  /* Apparition au scroll */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Onglets de la carte */
+  .tab-btn { position: relative; transition: color .3s; }
+  .tab-btn[aria-selected="true"] { color: var(--noir); }
+  #tabInk { transition: transform .55s cubic-bezier(.65,0,.2,1), width .55s cubic-bezier(.65,0,.2,1); }
+  .menu-item { opacity: 0; transform: translateY(18px) rotateX(-12deg); transform-origin: top center; }
+  .menu-panel.active .menu-item { animation: dealIn .7s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * 70ms); }
+  @keyframes dealIn { to { opacity: 1; transform: none; } }
+
+  /* Ardoise */
+  .ardoise {
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.05), transparent 60%),
+      linear-gradient(180deg, #1f2320, #151816);
+    border: 10px solid #5b3a22;
+    border-image: linear-gradient(135deg, #7a4f2e, #3e2614 40%, #8a5a33 70%, #3e2614) 1;
+    box-shadow: inset 0 0 60px rgba(0,0,0,.6), 0 30px 60px -20px rgba(0,0,0,.8);
+  }
+
+  /* Ticket de réservation */
+  .ticket-edge { --r: 10px; mask: radial-gradient(var(--r) at var(--r) 50%, #0000 98%, #000) calc(-1 * var(--r)) 0 / 100% 22px repeat-y; }
+
+  /* Champs */
+  .field { background: rgba(18,13,9,.55); border: 1px solid rgba(212,160,86,.25); border-radius: 12px; padding: .85rem 1rem; width: 100%; color: var(--creme); font-size: 16px; transition: border-color .2s, box-shadow .2s; }
+  .field:focus { outline: none; border-color: var(--ambre); box-shadow: 0 0 0 3px rgba(212,160,86,.18); }
+  .field::placeholder { color: rgba(201,185,160,.5); }
+  select.field { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d4a056' fill='none' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+  input[type="date"].field::-webkit-calendar-picker-indicator { filter: invert(.75) sepia(1) saturate(3) hue-rotate(-15deg); cursor: pointer; }
+  .field[aria-invalid="true"] { border-color: #e0715a; }
+
+  .chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip span { display: flex; align-items: center; gap: .5rem; border: 1px solid rgba(212,160,86,.25); border-radius: 999px; padding: .55rem 1rem; transition: background-color .25s, color .25s, border-color .25s, box-shadow .25s; cursor: pointer; font-size: .9rem; }
+  .chip input:checked + span { background: var(--ambre); color: var(--noir); border-color: var(--ambre); box-shadow: 0 8px 24px -10px rgba(212,160,86,.8); }
+  .chip input:focus-visible + span { outline: 2px solid var(--ambre); outline-offset: 3px; }
+
+  /* Boutons */
+  .btn-cuivre { background: linear-gradient(180deg, #d08a52, #a5612f); color: #1a0f07; box-shadow: inset 0 1px 0 rgba(255,230,190,.5), 0 12px 30px -12px rgba(208,138,82,.8); transition: transform .2s, box-shadow .2s, filter .2s; }
+  .btn-cuivre:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: inset 0 1px 0 rgba(255,230,190,.5), 0 18px 40px -12px rgba(208,138,82,.9); }
+  .btn-cuivre:active { transform: translateY(0); }
+
+  /* Header */
+  #header.scrolled { background: rgba(18,13,9,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
+
+  /* Ampoules guinguette */
+  .bulb { width: 9px; height: 13px; border-radius: 50% 50% 45% 45%; background: #ffd58a; box-shadow: 0 0 12px 3px rgba(255,200,110,.7), 0 0 34px 8px rgba(255,170,70,.25); animation: flicker 4s infinite; }
+  @keyframes flicker { 0%,100%{opacity:1} 46%{opacity:1} 48%{opacity:.55} 50%{opacity:1} 77%{opacity:.85} }
+
+  /* Carrousel d'avis */
+  #reviewTrack { transition: transform .8s cubic-bezier(.65,0,.2,1); }
+
+  /* Plaque de rue parisienne */
+  .plaque { background: #1d3b6e; border: 3px solid #e9eef5; outline: 2px solid #1d3b6e; box-shadow: 0 14px 30px -12px rgba(0,0,0,.7); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .reveal, .menu-item { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+
+<body class="font-sans overflow-x-hidden">
+<a href="#carte" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:bg-ambre focus:text-noir focus:px-4 focus:py-2 focus:rounded-full">Aller au contenu</a>
+
+<!-- ================= HEADER ================= -->
+<header id="header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-500">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4">
+    <a href="#accueil" class="group flex items-baseline gap-2 shrink-0" aria-label="L'Amuse Bouche, retour en haut">
+      <span class="font-display italic text-2xl sm:text-[1.7rem] text-ambre leading-none">L'Amuse</span>
+      <span class="font-display text-[.72rem] sm:text-xs tracking-[.42em] uppercase text-creme/90 leading-none">Bouche</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-[.92rem] text-creme/80" aria-label="Navigation principale">
+      <a href="#carte" class="hover:text-ambre transition-colors">La carte</a>
+      <a href="#ambiance" class="hover:text-ambre transition-colors">Soirées live</a>
+      <a href="#avis" class="hover:text-ambre transition-colors">Avis</a>
+      <a href="#infos" class="hover:text-ambre transition-colors">Accès & horaires</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="https://www.google.com/maps/search/?api=1&query=L'Amuse+Bouche+2+Boulevard+de+la+Gare+95210+Saint-Gratien" target="_blank" rel="noopener" class="hidden md:flex items-center gap-2 rounded-full border border-ambre/30 px-3 py-1.5 text-xs text-creme/90 hover:border-ambre transition-colors">
+        <span class="text-ambre tracking-tight" aria-hidden="true">★★★★☆</span>
+        <span><strong class="font-semibold">4.3/5</strong> sur +900 avis</span>
+      </a>
+      <a href="#reserver" class="btn-cuivre hidden sm:inline-flex rounded-full px-5 py-2.5 text-sm font-semibold">Réserver une table</a>
+      <button id="menuToggle" class="lg:hidden grid place-items-center w-11 h-11 rounded-full border border-ambre/30" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 1h18M0 6h18M6 11h12"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="lg:hidden hidden border-t border-ambre/15 bg-noir/95 backdrop-blur-xl" aria-label="Navigation mobile">
+    <div class="px-4 py-5 flex flex-col gap-1 font-display text-2xl">
+      <a href="#carte" class="py-2">La carte</a>
+      <a href="#reserver" class="py-2">Réserver</a>
+      <a href="#ambiance" class="py-2">Soirées live</a>
+      <a href="#avis" class="py-2">Avis</a>
+      <a href="#infos" class="py-2">Accès & horaires</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section id="accueil" class="relative min-h-[100svh] overflow-hidden flex items-end" aria-labelledby="hero-title">
+  <div class="absolute inset-0 -top-[10%] h-[120%]" data-speed="0.35" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=70" alt="" class="w-full h-full object-cover scale-105" fetchpriority="high">
+  </div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(212,160,86,.18),transparent_55%),linear-gradient(180deg,rgba(18,13,9,.55)_0%,rgba(18,13,9,.35)_35%,rgba(18,13,9,.92)_80%,#120d09_100%)]" aria-hidden="true"></div>
+
+  <!-- Guirlande -->
+  <div class="absolute top-[72px] inset-x-0 h-16 pointer-events-none" aria-hidden="true">
+    <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1000 60"><path d="M0 4 Q125 50 250 8 T500 8 T750 8 T1000 4" stroke="rgba(243,231,211,.25)" fill="none" stroke-width="1"/></svg>
+    <div id="bulbs" class="absolute inset-0"></div>
+  </div>
+
+  <!-- Assiettes flottantes en profondeur -->
+  <div id="heroStage" class="absolute inset-0 pointer-events-none hidden md:block" aria-hidden="true" style="perspective: 1200px">
+    <div class="absolute right-[7%] top-[20%] w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden ring-1 ring-ambre/40 glow" data-depth="40" data-speed="-0.12">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=70" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute right-[27%] top-[52%] w-36 h-36 lg:w-44 lg:h-44 rounded-full overflow-hidden ring-1 ring-ambre/30 shadow-2xl" data-depth="70" data-speed="-0.22">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=400&q=70" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute right-[3%] top-[62%] w-28 h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden ring-1 ring-ambre/30 shadow-2xl" data-depth="25" data-speed="-0.05">
+      <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=300&q=70" alt="" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <div class="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 pb-16 sm:pb-24 pt-40">
+    <p class="font-hand text-ambre text-2xl sm:text-3xl -rotate-2 mb-3">Brasserie · depuis le quai de la gare</p>
+    <h1 id="hero-title" class="font-display font-light text-[2.6rem] leading-[1.02] sm:text-6xl lg:text-[5.4rem] max-w-4xl tracking-[-.02em]">
+      L'Esprit <em class="text-ambre font-normal">Bistrot Chic</em><br class="hidden sm:block"> & Gourmand à Saint-Gratien.
+    </h1>
+    <p class="mt-6 max-w-xl text-lg text-creme/80 leading-relaxed">Plats faits maison, petit-déjeuner, cocktails & animations musique live face à la gare.</p>
+
+    <div class="mt-9 flex flex-wrap items-center gap-3">
+      <a href="#reserver" class="btn-cuivre rounded-full px-7 py-3.5 font-semibold">Réserver une table</a>
+      <a href="#carte" class="rounded-full border border-creme/30 px-7 py-3.5 font-medium hover:border-ambre hover:text-ambre transition-colors">Voir l'ardoise du jour</a>
+    </div>
+
+    <ul class="mt-12 flex flex-wrap gap-3 text-sm" aria-label="Points forts">
+      <li class="glass rounded-full px-4 py-2 flex items-center gap-2"><span class="text-ambre" aria-hidden="true">★</span><strong>4,3/5</strong> Google <span class="text-creme/60">(918 avis)</span></li>
+      <li class="glass rounded-full px-4 py-2 flex items-center gap-2"><span class="text-ambre" aria-hidden="true">☀</span>Terrasse & Wifi</li>
+      <li class="glass rounded-full px-4 py-2 flex items-center gap-2"><span id="liveDot" class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_2px_rgba(52,211,153,.6)]" aria-hidden="true"></span><span id="openStatus">Ouvert 7j/7 dès 7h</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TIMELINE DES MOMENTS ================= -->
+<section class="relative border-y border-ambre/15 bg-noir-2" aria-label="Les moments de la journée">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-y-6">
+    <div class="moment md:border-r border-ambre/15 md:pr-6" data-from="7" data-to="11.5">
+      <p class="text-xs uppercase tracking-[.25em] text-creme/50">07h – 11h30</p>
+      <p class="font-display text-2xl mt-1">Petit-déjeuner</p>
+      <p class="text-sm text-creme/60">Viennoiseries, brunch le week-end</p>
+    </div>
+    <div class="moment md:border-r border-ambre/15 md:px-6" data-from="11.5" data-to="15">
+      <p class="text-xs uppercase tracking-[.25em] text-creme/50">11h30 – 15h</p>
+      <p class="font-display text-2xl mt-1">Déjeuner</p>
+      <p class="text-sm text-creme/60">Ardoise & formule du jour</p>
+    </div>
+    <div class="moment md:border-r border-ambre/15 md:px-6" data-from="17" data-to="19.5">
+      <p class="text-xs uppercase tracking-[.25em] text-creme/50">17h – 19h30</p>
+      <p class="font-display text-2xl mt-1">Apéro & Cocktails</p>
+      <p class="text-sm text-creme/60">Happy hour en terrasse</p>
+    </div>
+    <div class="moment md:pl-6" data-from="19.5" data-to="24">
+      <p class="text-xs uppercase tracking-[.25em] text-creme/50">19h30 – 00h</p>
+      <p class="font-display text-2xl mt-1">Dîner</p>
+      <p class="text-sm text-creme/60">Bistronomie & soirées live</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LA CARTE ================= -->
+<section id="carte" class="relative py-24 sm:py-32" aria-labelledby="carte-title">
+  <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,rgba(184,115,62,.12),transparent_60%)]" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-end reveal">
+      <div>
+        <p class="text-xs uppercase tracking-[.35em] text-cuivre-light">La carte & l'ardoise</p>
+        <h2 id="carte-title" class="font-display text-4xl sm:text-6xl font-light mt-3 tracking-tight">Fait maison, <em class="text-ambre">du matin au dernier verre.</em></h2>
+      </div>
+      <p class="max-w-sm text-creme/65 leading-relaxed">Produits frais, recettes de brasserie revisitées, et une ardoise qui change au gré du marché. Les incontournables de la maison, à toute heure.</p>
+    </div>
+
+    <!-- Onglets -->
+    <div class="mt-12 overflow-x-auto -mx-4 px-4 pb-2 reveal" style="scrollbar-width:none">
+      <div role="tablist" aria-label="Catégories de la carte" id="tabs" class="relative inline-flex gap-1 p-1.5 rounded-full glass whitespace-nowrap">
+        <span id="tabInk" class="absolute top-1.5 bottom-1.5 left-0 rounded-full bg-gradient-to-b from-ambre-soft to-ambre shadow-[0_8px_24px_-8px_rgba(212,160,86,.9)]" aria-hidden="true"></span>
+        <button role="tab" class="tab-btn relative z-10 px-5 py-2.5 rounded-full text-sm font-medium" aria-selected="true" aria-controls="p-matin" id="t-matin">Petit-déj & Brunch</button>
+        <button role="tab" class="tab-btn relative z-10 px-5 py-2.5 rounded-full text-sm font-medium" aria-selected="false" aria-controls="p-entrees" id="t-entrees" tabindex="-1">Entrées & À partager</button>
+        <button role="tab" class="tab-btn relative z-10 px-5 py-2.5 rounded-full text-sm font-medium" aria-selected="false" aria-controls="p-plats" id="t-plats" tabindex="-1">Plats Signature</button>
+        <button role="tab" class="tab-btn relative z-10 px-5 py-2.5 rounded-full text-sm font-medium" aria-selected="false" aria-controls="p-desserts" id="t-desserts" tabindex="-1">Douceurs</button>
+        <button role="tab" class="tab-btn relative z-10 px-5 py-2.5 rounded-full text-sm font-medium" aria-selected="false" aria-controls="p-bar" id="t-bar" tabindex="-1">Bar & Cocktails</button>
+      </div>
+    </div>
+
+    <div class="mt-10 relative min-h-[560px]" style="perspective:1400px">
+      <!-- Petit-déjeuner -->
+      <div id="p-matin" role="tabpanel" aria-labelledby="t-matin" class="menu-panel active">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-items='[
+          {"img":"photo-1484723091739-30a097e8f929","t":"Brioche perdue du matin","d":"Brioche dorée au beurre, caramel au beurre salé, fruits frais","p":"9,50","tag":"Maison"},
+          {"img":"photo-1533089860892-a7c6f0a88666","t":"Formule Petit-déjeuner","d":"Boisson chaude, jus d’orange pressé, viennoiserie, tartine beurre-confiture","p":"8,90"},
+          {"img":"photo-1525351484163-7529414344d8","t":"Brunch de la Gare","d":"Œufs brouillés, bacon croustillant, avocat, pain toasté, salade de fruits","p":"21,00","tag":"Week-end"}
+        ]'></div>
+      </div>
+      <!-- Entrées -->
+      <div id="p-entrees" role="tabpanel" aria-labelledby="t-entrees" class="menu-panel hidden">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-items='[
+          {"img":"photo-1452195100486-9cc805987862","t":"Planche mixte du bistrot","d":"Charcuteries fines, fromages affinés, cornichons, pain de campagne","p":"19,00","tag":"À partager"},
+          {"img":"photo-1546069901-ba9599a7e63c","t":"Terrine maison au poivre","d":"Terrine de campagne, chutney d’oignons, mesclun","p":"9,00","tag":"Maison"},
+          {"img":"photo-1541014741259-de529411b96a","t":"Tapas du bistrot","d":"Accras, croquettes, rillettes et gressins — idéal à l’apéro","p":"14,50"}
+        ]'></div>
+      </div>
+      <!-- Plats -->
+      <div id="p-plats" role="tabpanel" aria-labelledby="t-plats" class="menu-panel hidden">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-items='[
+          {"img":"photo-1568901346375-23c9450c58cd","t":"Burger L’Amuse Bouche","d":"Bœuf charolais, cheddar affiné, oignons confits, frites maison","p":"18,50","tag":"Signature"},
+          {"img":"photo-1600891964092-4316c288032e","t":"Bavette poêlée, sauce échalote","d":"Bavette de bœuf, échalotes au vin rouge, frites fraîches","p":"21,00"},
+          {"img":"photo-1519708227418-c8fd9a32b7a2","t":"Poisson du jour","d":"Selon arrivage, beurre blanc citronné, légumes de saison","p":"22,00","tag":"Ardoise"},
+          {"img":"photo-1512621776951-a57141f2eefd","t":"Grande salade composée","d":"Chèvre chaud, noix, miel, lardons, crudités croquantes","p":"16,50"}
+        ]'></div>
+      </div>
+      <!-- Desserts -->
+      <div id="p-desserts" role="tabpanel" aria-labelledby="t-desserts" class="menu-panel hidden">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-items='[
+          {"img":"photo-1571877227200-a0d98ea607e9","t":"Tiramisu maison","d":"Mascarpone, biscuit imbibé au café, cacao amer","p":"8,50","tag":"Maison"},
+          {"img":"photo-1551024506-0bccd828d307","t":"Brioche perdue, glace vanille","d":"Caramel au beurre salé, éclats de noisettes torréfiées","p":"9,00"},
+          {"img":"photo-1509042239860-f550ce710b93","t":"Café gourmand","d":"Expresso et trio de mignardises du moment","p":"9,50","tag":"Le classique"}
+        ]'></div>
+      </div>
+      <!-- Bar -->
+      <div id="p-bar" role="tabpanel" aria-labelledby="t-bar" class="menu-panel hidden">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-items='[
+          {"img":"photo-1514362545857-3bc16c4c7d1b","t":"Cocktails créations","d":"Spritz ambré, mojito, signature du barman selon la saison","p":"dès 10,00","tag":"Création"},
+          {"img":"photo-1510812431401-41d2bd2722f3","t":"Carte des vins","d":"Bordeaux, Loire, Bourgogne au verre ou à la bouteille","p":"dès 5,50"},
+          {"img":"photo-1470337458703-46ad1756a187","t":"Happy hour","d":"Pintes, verres de vin et cocktails à prix doux en fin de journée","p":"17h–20h","tag":"Tous les jours"}
+        ]'></div>
+      </div>
+    </div>
+
+    <!-- Ardoise du jour -->
+    <div class="mt-20 grid lg:grid-cols-[1.05fr_1fr] gap-10 items-center">
+      <div class="ardoise rounded-sm p-7 sm:p-10 -rotate-1 reveal tilt" data-tilt-max="5">
+        <p class="font-hand text-ambre-soft text-3xl">L'ardoise du jour</p>
+        <p class="font-hand text-creme/60 text-xl -mt-1" id="ardoiseDate"></p>
+        <ul class="mt-6 space-y-4 font-hand text-2xl sm:text-[1.7rem] text-creme/95 lift-sm">
+          <li class="flex items-baseline"><span>Velouté de saison & croûtons</span><span class="leader"></span><span class="text-ambre-soft">7,50</span></li>
+          <li class="flex items-baseline"><span>Suprême de volaille, jus corsé</span><span class="leader"></span><span class="text-ambre-soft">18,00</span></li>
+          <li class="flex items-baseline"><span>Tarte fine aux pommes</span><span class="leader"></span><span class="text-ambre-soft">8,00</span></li>
+          <li class="flex items-baseline pt-3 border-t border-dashed border-creme/25"><span>Formule entrée + plat ou plat + dessert</span><span class="leader"></span><span class="text-ambre-soft">22,90</span></li>
+        </ul>
+        <span class="glare"></span>
+      </div>
+      <div class="reveal">
+        <p class="text-xs uppercase tracking-[.35em] text-cuivre-light">Bistronomie</p>
+        <h3 class="font-display text-3xl sm:text-4xl font-light mt-3 leading-tight">Une cuisine de brasserie, <em class="text-ambre">écrite à la craie chaque matin.</em></h3>
+        <p class="mt-5 text-creme/70 leading-relaxed">Le chef compose l'ardoise selon le marché : une entrée, un plat, un dessert. Les classiques restent — le burger, la bavette, le tiramisu — et le reste suit les saisons.</p>
+        <p class="mt-4 text-sm text-creme/45">Carte et prix indicatifs, susceptibles d'évoluer. Allergènes : demandez à l'équipe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RÉSERVATION ================= -->
+<section id="reserver" class="relative py-24 sm:py-32 overflow-hidden" aria-labelledby="resa-title">
+  <div class="absolute inset-0 -top-[15%] h-[130%] opacity-30" data-speed="0.25" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=60" alt="" loading="lazy" class="w-full h-full object-cover">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-b from-noir via-noir/85 to-noir" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-16 items-start">
+    <div class="lg:sticky lg:top-28 reveal">
+      <p class="text-xs uppercase tracking-[.35em] text-cuivre-light">Réserver une table ou privatiser</p>
+      <h2 id="resa-title" class="font-display text-4xl sm:text-6xl font-light mt-3 tracking-tight leading-[1.05]">Votre table <em class="text-ambre">vous attend.</em></h2>
+      <p class="mt-6 text-creme/70 leading-relaxed max-w-md">Remplissez le bon ci-contre : votre demande part directement sur notre WhatsApp, et l'équipe vous confirme la réservation rapidement.</p>
+      <ul class="mt-8 space-y-3 text-creme/80">
+        <li class="flex gap-3"><span class="text-ambre" aria-hidden="true">—</span>Anniversaires, afterworks, soirées privées</li>
+        <li class="flex gap-3"><span class="text-ambre" aria-hidden="true">—</span>Terrasse sur demande, selon la météo</li>
+        <li class="flex gap-3"><span class="text-ambre" aria-hidden="true">—</span>Plus de 12 personnes ? Choisissez « Événement »</li>
+      </ul>
+      <p class="mt-8 text-sm text-creme/55">Une question ? <a href="tel:+33139897155" class="text-ambre underline underline-offset-4 decoration-ambre/40 hover:decoration-ambre">01 39 89 71 55</a></p>
+    </div>
+
+    <form id="resaForm" class="glass glow rounded-[28px] p-6 sm:p-10 reveal" novalidate>
+      <div class="flex items-center justify-between gap-4 pb-6 border-b border-dashed border-ambre/30">
+        <p class="font-display italic text-2xl text-ambre">Bon de réservation</p>
+        <p class="text-xs uppercase tracking-[.25em] text-creme/45">N° <span id="ticketNo">0000</span></p>
+      </div>
+
+      <fieldset class="mt-7">
+        <legend class="text-sm text-creme/70 mb-3">Type de service</legend>
+        <div class="flex flex-wrap gap-2" id="serviceChips">
+          <label class="chip relative"><input type="radio" name="service" value="Petit-déjeuner / Brunch" data-from="7" data-to="11.5" checked><span>☕ Petit-déj / Brunch</span></label>
+          <label class="chip relative"><input type="radio" name="service" value="Déjeuner" data-from="11.5" data-to="15"><span>🍽 Déjeuner</span></label>
+          <label class="chip relative"><input type="radio" name="service" value="Apéro & Cocktails" data-from="17" data-to="20"><span>🍸 Apéro & Cocktails</span></label>
+          <label class="chip relative"><input type="radio" name="service" value="Dîner" data-from="19" data-to="23"><span>🍷 Dîner</span></label>
+          <label class="chip relative"><input type="radio" name="service" value="Événement / Soirée Live" data-from="18" data-to="23"><span>🎷 Événement / Live</span></label>
+        </div>
+      </fieldset>
+
+      <div class="mt-7 grid sm:grid-cols-3 gap-5">
+        <div>
+          <label for="guests" class="block text-sm text-creme/70 mb-2">Personnes</label>
+          <div class="flex items-center field !p-1.5">
+            <button type="button" class="w-10 h-10 rounded-lg hover:bg-ambre/15 text-ambre text-xl" data-step="-1" aria-label="Retirer une personne">−</button>
+            <input id="guests" name="guests" type="number" min="1" max="80" value="2" inputmode="numeric" class="flex-1 min-w-0 bg-transparent text-center font-display text-xl focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none">
+            <button type="button" class="w-10 h-10 rounded-lg hover:bg-ambre/15 text-ambre text-xl" data-step="1" aria-label="Ajouter une personne">+</button>
+          </div>
+        </div>
+        <div>
+          <label for="date" class="block text-sm text-creme/70 mb-2">Date</label>
+          <input id="date" name="date" type="date" class="field" required>
+        </div>
+        <div>
+          <label for="time" class="block text-sm text-creme/70 mb-2">Créneau</label>
+          <select id="time" name="time" class="field" required></select>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <label for="notes" class="block text-sm text-creme/70 mb-2">Demandes particulières <span class="text-creme/40">(facultatif)</span></label>
+        <textarea id="notes" name="notes" rows="3" class="field resize-none" placeholder="Terrasse, chaise bébé, allergie, anniversaire…"></textarea>
+      </div>
+
+      <div class="mt-5 grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="name" class="block text-sm text-creme/70 mb-2">Nom</label>
+          <input id="name" name="name" type="text" class="field" autocomplete="name" placeholder="Marie Dupont" required>
+          <p class="err hidden mt-1.5 text-xs text-[#f0907b]" id="name-err">Indiquez votre nom.</p>
+        </div>
+        <div>
+          <label for="phone" class="block text-sm text-creme/70 mb-2">Téléphone</label>
+          <input id="phone" name="phone" type="tel" class="field" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" required>
+          <p class="err hidden mt-1.5 text-xs text-[#f0907b]" id="phone-err">Numéro invalide (10 chiffres).</p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-dashed border-ambre/30 flex flex-col sm:flex-row sm:items-center gap-5 justify-between">
+        <p id="summary" class="text-sm text-creme/65 leading-relaxed" aria-live="polite"></p>
+        <button type="submit" class="btn-cuivre shrink-0 rounded-full px-7 py-4 font-semibold flex items-center justify-center gap-2.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Valider ma réservation
+        </button>
+      </div>
+      <p class="mt-4 text-xs text-creme/40">En validant, WhatsApp s'ouvre avec votre demande pré-remplie. Rien n'est envoyé sans votre confirmation dans l'application.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= AMBIANCE & LIVE ================= -->
+<section id="ambiance" class="relative py-24 sm:py-32" aria-labelledby="live-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="max-w-3xl reveal">
+      <p class="text-xs uppercase tracking-[.35em] text-cuivre-light">Événements & ambiance</p>
+      <h2 id="live-title" class="font-display text-4xl sm:text-6xl font-light mt-3 tracking-tight leading-[1.05]">Musique live, <em class="text-ambre">verres qui trinquent,</em> terrasse au soleil.</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-6 gap-5 md:auto-rows-[260px]">
+      <figure class="relative md:col-span-4 md:row-span-2 h-[340px] md:h-auto rounded-[24px] overflow-hidden reveal">
+        <div class="absolute inset-0 -top-[12%] h-[124%]" data-speed="0.12">
+          <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=1400&q=70" alt="Guitariste en concert acoustique" loading="lazy" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-noir via-noir/30 to-transparent"></div>
+        <figcaption class="absolute bottom-0 p-6 sm:p-8 max-w-lg">
+          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[.25em] text-ambre"><span class="w-1.5 h-1.5 rounded-full bg-ambre animate-pulse"></span>Soirées live</span>
+          <p class="font-display text-3xl sm:text-4xl mt-2">Jazz manouche, pop acoustique, DJ sets.</p>
+          <p class="mt-2 text-creme/70">Plusieurs soirs par mois, la salle s'allume : programme affiché au bar et sur nos réseaux.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="relative md:col-span-2 h-[260px] md:h-auto rounded-[24px] overflow-hidden reveal">
+        <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=70" alt="Terrasse de brasserie ensoleillée" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]">
+        <div class="absolute inset-0 bg-gradient-to-t from-noir/90 to-transparent"></div>
+        <figcaption class="absolute bottom-0 p-6"><p class="font-display text-2xl">La terrasse</p><p class="text-sm text-creme/70">Plein sud, face à la gare.</p></figcaption>
+      </figure>
+
+      <div class="md:col-span-2 glass rounded-[24px] p-6 flex flex-col justify-between reveal tilt" data-tilt-max="8">
+        <div class="lift-sm">
+          <p class="text-xs uppercase tracking-[.25em] text-creme/50">Soirées à thème</p>
+          <ul class="mt-4 space-y-3 font-display text-xl">
+            <li class="flex justify-between gap-3"><span>Jeudi afterwork</span><span class="text-ambre text-base self-center">Tapas & pintes</span></li>
+            <li class="flex justify-between gap-3"><span>Vendredi live</span><span class="text-ambre text-base self-center">Concert</span></li>
+            <li class="flex justify-between gap-3"><span>Matchs</span><span class="text-ambre text-base self-center">Grand écran</span></li>
+          </ul>
+        </div>
+        <a href="#reserver" data-service="Événement / Soirée Live" class="lift-sm mt-5 inline-flex items-center gap-2 text-ambre font-medium hover:gap-3 transition-[gap]">Privatiser une soirée <span aria-hidden="true">→</span></a>
+        <span class="glare"></span>
+      </div>
+    </div>
+
+    <!-- Bandeau défilant -->
+    <div class="mt-16 overflow-hidden border-y border-ambre/15 py-5" aria-hidden="true">
+      <div class="flex gap-12 whitespace-nowrap font-display italic text-3xl sm:text-4xl text-creme/25 animate-[marquee_38s_linear_infinite] w-max">
+        <span>Petit-déjeuner</span><span class="text-ambre/60">✦</span><span>Brunch</span><span class="text-ambre/60">✦</span><span>Ardoise du jour</span><span class="text-ambre/60">✦</span><span>Happy hour</span><span class="text-ambre/60">✦</span><span>Musique live</span><span class="text-ambre/60">✦</span><span>Terrasse</span><span class="text-ambre/60">✦</span>
+        <span>Petit-déjeuner</span><span class="text-ambre/60">✦</span><span>Brunch</span><span class="text-ambre/60">✦</span><span>Ardoise du jour</span><span class="text-ambre/60">✦</span><span>Happy hour</span><span class="text-ambre/60">✦</span><span>Musique live</span><span class="text-ambre/60">✦</span><span>Terrasse</span><span class="text-ambre/60">✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section id="avis" class="relative py-24 sm:py-32 bg-noir-2 border-y border-ambre/10" aria-labelledby="avis-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-20 items-end reveal">
+      <div>
+        <p class="text-xs uppercase tracking-[.35em] text-cuivre-light">Avis clients</p>
+        <h2 id="avis-title" class="font-display text-[5.5rem] sm:text-[7.5rem] font-light leading-none mt-2 text-ambre">4,3<span class="text-creme/30 text-5xl sm:text-6xl">/5</span></h2>
+        <p class="mt-2 text-creme/70">Note moyenne Google sur <strong class="text-creme">918 avis</strong></p>
+      </div>
+      <div class="flex items-center gap-3 lg:justify-end">
+        <button id="revPrev" class="w-12 h-12 rounded-full border border-ambre/30 hover:border-ambre hover:bg-ambre/10 grid place-items-center" aria-label="Avis précédent">←</button>
+        <button id="revNext" class="w-12 h-12 rounded-full border border-ambre/30 hover:border-ambre hover:bg-ambre/10 grid place-items-center" aria-label="Avis suivant">→</button>
+        <a href="https://www.google.com/maps/search/?api=1&query=L'Amuse+Bouche+2+Boulevard+de+la+Gare+95210+Saint-Gratien" target="_blank" rel="noopener" class="ml-2 text-sm text-ambre underline underline-offset-4 decoration-ambre/40 hover:decoration-ambre">Tous les avis sur Google</a>
+      </div>
+    </div>
+
+    <div class="mt-12 overflow-hidden" aria-roledescription="carrousel" aria-label="Avis clients">
+      <div id="reviewTrack" class="flex gap-5">
+        <!-- Rempli par JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFOS & CONTACT ================= -->
+<section id="infos" class="relative py-24 sm:py-32" aria-labelledby="infos-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-10">
+    <div class="reveal">
+      <p class="text-xs uppercase tracking-[.35em] text-cuivre-light">Accès & horaires</p>
+      <h2 id="infos-title" class="font-display text-4xl sm:text-5xl font-light mt-3 tracking-tight">Juste en face <em class="text-ambre">de la gare.</em></h2>
+
+      <div class="plaque inline-block rounded-md px-5 py-3 mt-8 text-center text-white -rotate-1">
+        <p class="text-[.65rem] tracking-[.2em] uppercase opacity-80">Saint-Gratien · 95210</p>
+        <p class="font-display text-xl sm:text-2xl font-semibold tracking-wide">2 Boulevard de la Gare</p>
+      </div>
+
+      <dl class="mt-10 grid sm:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <dt class="text-xs uppercase tracking-[.25em] text-creme/50">Horaires</dt>
+          <dd class="mt-2 font-display text-2xl">7j/7 · 07h – 00h</dd>
+          <dd class="mt-1 text-sm text-creme/60">Cuisine en continu, petit-déjeuner dès l'ouverture.</dd>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <dt class="text-xs uppercase tracking-[.25em] text-creme/50">Téléphone</dt>
+          <dd class="mt-2 font-display text-2xl"><a href="tel:+33139897155" class="hover:text-ambre transition-colors">01 39 89 71 55</a></dd>
+          <dd class="mt-1 text-sm text-creme/60">Réservations & privatisations.</dd>
+        </div>
+        <div class="glass rounded-2xl p-6 sm:col-span-2">
+          <dt class="text-xs uppercase tracking-[.25em] text-creme/50">Venir</dt>
+          <dd class="mt-2 text-creme/80 leading-relaxed">Gare de Saint-Gratien (RER C / Transilien H) à quelques pas. Terrasse, Wifi gratuit, accueil des groupes.</dd>
+          <dd class="mt-4 flex flex-wrap gap-3">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=2+Boulevard+de+la+Gare+95210+Saint-Gratien" target="_blank" rel="noopener" class="btn-cuivre rounded-full px-5 py-2.5 text-sm font-semibold">Itinéraire</a>
+            <a href="tel:+33139897155" class="rounded-full border border-creme/25 px-5 py-2.5 text-sm hover:border-ambre hover:text-ambre transition-colors">Appeler</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="reveal relative rounded-[28px] overflow-hidden glass min-h-[420px] lg:min-h-full">
+      <iframe title="Plan d'accès : L'Amuse Bouche, 2 Boulevard de la Gare, Saint-Gratien" src="https://www.google.com/maps?q=2+Boulevard+de+la+Gare,+95210+Saint-Gratien&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 w-full h-full border-0" style="filter: grayscale(.6) sepia(.35) contrast(1.05) brightness(.85)"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-ambre/15 bg-noir-2">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-14 grid md:grid-cols-[1.4fr_1fr_1fr] gap-10">
+    <div>
+      <p class="flex items-baseline gap-2"><span class="font-display italic text-3xl text-ambre">L'Amuse</span><span class="font-display text-xs tracking-[.42em] uppercase">Bouche</span></p>
+      <p class="mt-3 text-creme/60 max-w-sm">Brasserie bistronomique à Saint-Gratien. Faite maison, du petit-déjeuner au dernier verre.</p>
+    </div>
+    <address class="not-italic text-creme/70 leading-relaxed">
+      2 Boulevard de la Gare<br>95210 Saint-Gratien<br>
+      <a href="tel:+33139897155" class="hover:text-ambre">01 39 89 71 55</a>
+    </address>
+    <div class="text-creme/70">
+      <p>Ouvert 7j/7</p><p>07h00 – 00h00</p>
+      <a href="#reserver" class="inline-block mt-3 text-ambre underline underline-offset-4 decoration-ambre/40">Réserver une table</a>
+    </div>
+  </div>
+  <div class="border-t border-ambre/10 py-5 text-center text-xs text-creme/40">© <span id="year"></span> L'Amuse Bouche · L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</div>
+</footer>
+
+<!-- Bouton mobile flottant -->
+<a href="#reserver" id="fab" class="btn-cuivre sm:hidden fixed bottom-4 inset-x-4 z-40 rounded-full py-4 text-center font-semibold translate-y-24 transition-transform duration-500">Réserver une table</a>
+
+<style>@keyframes marquee { to { transform: translateX(-50%); } }</style>
+
+<script>
+(() => {
+  const WHATSAPP = '33766338472';
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const img = (id, w) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=70`;
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Header, menu mobile, FAB ---------- */
+  const header = $('#header'), fab = $('#fab');
+  const onScrollUI = () => {
+    const y = scrollY;
+    header.classList.toggle('scrolled', y > 40);
+    const resa = $('#reserver').getBoundingClientRect();
+    const inResa = resa.top < innerHeight && resa.bottom > 0;
+    fab.style.transform = (y > innerHeight * .7 && !inResa) ? 'translateY(0)' : 'translateY(6rem)';
+  };
+  const toggle = $('#menuToggle'), mnav = $('#mobileNav');
+  toggle.addEventListener('click', () => {
+    const open = mnav.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', open);
+    header.classList.add('scrolled');
+  });
+  $$('a', mnav).forEach(a => a.addEventListener('click', () => { mnav.classList.add('hidden'); toggle.setAttribute('aria-expanded', false); }));
+
+  /* ---------- Ouvert / fermé & moment de la journée ---------- */
+  const now = new Date(), h = now.getHours() + now.getMinutes() / 60;
+  const open = h >= 7;
+  $('#openStatus').textContent = open ? 'Ouvert maintenant · 7j/7 jusqu’à minuit' : 'Ouvre à 7h · 7j/7';
+  if (!open) $('#liveDot').className = 'w-2 h-2 rounded-full bg-ambre';
+  $$('.moment').forEach(m => {
+    if (h >= +m.dataset.from && h < +m.dataset.to) {
+      m.querySelector('p').insertAdjacentHTML('beforeend', ' <span class="inline-block align-middle text-[.6rem] tracking-[.18em] bg-ambre text-noir rounded-full px-2 py-0.5 ml-1">En ce moment</span>');
+    } else m.classList.add('opacity-60');
+  });
+  $('#ardoiseDate').textContent = now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+
+  /* ---------- Guirlande ---------- */
+  const bulbs = $('#bulbs');
+  for (let i = 1; i < 16; i++) {
+    const x = i / 16, y = 8 + Math.abs(Math.sin(x * Math.PI * 4)) * 34;
+    const b = document.createElement('span');
+    b.className = 'bulb absolute';
+    b.style.cssText = `left:${x * 100}%;top:${y}px;animation-delay:${(i * 0.37) % 4}s`;
+    bulbs.appendChild(b);
+  }
+
+  /* ---------- Cartes de la carte ---------- */
+  $$('[data-items]').forEach(grid => {
+    JSON.parse(grid.dataset.items).forEach((it, i) => {
+      grid.insertAdjacentHTML('beforeend', `
+        <article class="menu-item" style="--i:${i}">
+          <div class="tilt glass rounded-[22px] p-3 h-full" data-tilt-max="10">
+            <div class="relative aspect-[4/3] rounded-[16px] overflow-hidden lift-sm">
+              <img src="${img(it.img, 700)}" alt="${it.t}" loading="lazy" class="w-full h-full object-cover">
+              ${it.tag ? `<span class="absolute top-3 left-3 rounded-full bg-noir/75 backdrop-blur px-3 py-1 text-[.7rem] uppercase tracking-[.18em] text-ambre border border-ambre/30">${it.tag}</span>` : ''}
+            </div>
+            <div class="px-3 pt-5 pb-4 lift">
+              <div class="flex items-baseline">
+                <h3 class="font-display text-[1.35rem] leading-tight">${it.t}</h3>
+                <span class="leader"></span>
+                <span class="font-display text-ambre text-lg whitespace-nowrap tabular">${it.p}${/\d,\d\d$/.test(it.p) ? ' €' : ''}</span>
+              </div>
+              <p class="mt-2 text-sm text-creme/60 leading-relaxed">${it.d}</p>
+            </div>
+            <span class="glare"></span>
+          </div>
+        </article>`);
+    });
+  });
+
+  /* ---------- Onglets ---------- */
+  const tabs = $$('[role="tab"]'), ink = $('#tabInk');
+  const moveInk = (t) => { ink.style.width = t.offsetWidth + 'px'; ink.style.transform = `translateX(${t.offsetLeft}px)`; };
+  const select = (t, focus) => {
+    tabs.forEach(o => {
+      const on = o === t;
+      o.setAttribute('aria-selected', on); o.tabIndex = on ? 0 : -1;
+      const p = document.getElementById(o.getAttribute('aria-controls'));
+      p.classList.toggle('hidden', !on);
+      p.classList.remove('active');
+      if (on) { void p.offsetWidth; p.classList.add('active'); }
+    });
+    moveInk(t);
+    if (focus) t.focus();
+    const sc = $('#tabs').parentElement;
+    sc.scrollTo({ left: t.offsetLeft - (sc.clientWidth - t.offsetWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length], true); }
+    });
+  });
+  // Ouvre l'onglet correspondant au moment de la journée
+  const initial = h < 11.5 ? tabs[0] : h >= 17 && h < 19.5 ? tabs[4] : tabs[2];
+  addEventListener('load', () => moveInk($('[aria-selected="true"]')));
+  addEventListener('resize', () => moveInk($('[aria-selected="true"]')));
+  requestAnimationFrame(() => { select(initial); });
+  document.fonts && document.fonts.ready.then(() => moveInk($('[aria-selected="true"]')));
+
+  /* ---------- Tilt 3D ---------- */
+  if (finePointer && !reduced) {
+    document.addEventListener('pointermove', e => {
+      const el = e.target.closest('.tilt');
+      $$('.tilt.is-tilting').forEach(o => { if (o !== el) reset(o); });
+      if (!el) return;
+      const r = el.getBoundingClientRect(), max = +(el.dataset.tiltMax || 10);
+      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      el.classList.add('is-tilting');
+      el.style.transform = `perspective(900px) rotateX(${(.5 - py) * max}deg) rotateY(${(px - .5) * max}deg) scale3d(1.02,1.02,1.02)`;
+      el.style.setProperty('--gx', px * 100 + '%'); el.style.setProperty('--gy', py * 100 + '%');
+    }, { passive: true });
+    const reset = el => { el.classList.remove('is-tilting'); el.style.transform = ''; };
+    document.addEventListener('pointerleave', () => $$('.tilt.is-tilting').forEach(reset));
+  }
+
+  /* ---------- Parallaxe + profondeur du hero ---------- */
+  const layers = $$('[data-speed]'), depth = $$('[data-depth]');
+  let mx = 0, my = 0, ticking = false;
+  const render = () => {
+    ticking = false;
+    onScrollUI();
+    if (reduced) return;
+    layers.forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > innerHeight + 200) return;
+      const offset = (r.top + r.height / 2 - innerHeight / 2) * -(+el.dataset.speed);
+      const d = el.dataset.depth ? +el.dataset.depth : 0;
+      el.style.transform = `translate3d(${mx * d}px, ${offset + my * d}px, 0)`;
+    });
+  };
+  const queue = () => { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
+  addEventListener('scroll', queue, { passive: true });
+  if (finePointer) $('#accueil').addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; queue(); });
+  render();
+
+  /* ---------- Apparitions ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -10% 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  /* ---------- Avis ---------- */
+  // Extraits représentatifs : à remplacer par de vrais avis Google de l'établissement.
+  const reviews = [
+    ['Sophie L.', 5, 'Brunch du dimanche parfait : brioche perdue incroyable et service souriant. La terrasse au soleil, un vrai bonheur.'],
+    ['Karim B.', 5, 'Burger maison excellent, frites fraîches, et le cadre bois et cuivre est très chaleureux. On reviendra pour la soirée live.'],
+    ['Nathalie D.', 4, 'Idéal avant de prendre le train. Café gourmand généreux, équipe aux petits soins même en plein rush.'],
+    ['Julien M.', 5, 'Afterwork entre collègues : cocktails réussis, planche à partager copieuse, bonne musique. Ambiance au top.'],
+    ['Camille R.', 4, 'La bavette sauce échalote était parfaitement cuite. Belle adresse bistronomique à Saint-Gratien.'],
+    ['Thomas P.', 5, 'Ouvert tôt et tard, c’est rare. Petit-déjeuner complet à prix correct et wifi qui fonctionne bien.'],
+  ];
+  const track = $('#reviewTrack');
+  track.innerHTML = reviews.map(([n, s, t]) => `
+    <figure class="tilt glass rounded-[22px] p-7 shrink-0 w-[85%] sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] flex flex-col" data-tilt-max="6">
+      <p class="text-ambre tracking-wider lift-sm" aria-label="${s} sur 5">${'★'.repeat(s)}<span class="text-creme/20">${'★'.repeat(5 - s)}</span></p>
+      <blockquote class="mt-4 font-display text-xl leading-snug flex-1 lift-sm">« ${t} »</blockquote>
+      <figcaption class="mt-6 flex items-center gap-3 text-sm text-creme/70">
+        <span class="w-9 h-9 rounded-full bg-gradient-to-br from-cuivre to-cuivre-dark grid place-items-center text-noir font-semibold">${n[0]}</span>${n}<span class="text-creme/40">· Google</span>
+      </figcaption>
+      <span class="glare"></span>
+    </figure>`).join('');
+  let ri = 0, timer;
+  const cards = [...track.children];
+  const perView = () => innerWidth >= 1024 ? 3 : innerWidth >= 640 ? 2 : 1;
+  const go = (n) => {
+    const maxI = cards.length - perView();
+    ri = n > maxI ? 0 : n < 0 ? maxI : n;
+    track.style.transform = `translateX(${cards[0].offsetLeft - cards[ri].offsetLeft}px)`;
+  };
+  const auto = () => { clearInterval(timer); if (!reduced) timer = setInterval(() => go(ri + 1), 6000); };
+  $('#revNext').addEventListener('click', () => { go(ri + 1); auto(); });
+  $('#revPrev').addEventListener('click', () => { go(ri - 1); auto(); });
+  track.addEventListener('pointerenter', () => clearInterval(timer));
+  track.addEventListener('pointerleave', auto);
+  let sx = null;
+  track.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
+  track.addEventListener('touchend', e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) { go(ri + (dx < 0 ? 1 : -1)); auto(); } sx = null; });
+  addEventListener('resize', () => go(ri));
+  auto();
+
+  /* ---------- Réservation → WhatsApp ---------- */
+  const form = $('#resaForm'), dateI = $('#date'), timeS = $('#time'), guests = $('#guests');
+  const pad = n => String(n).padStart(2, '0');
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  dateI.min = iso(now); dateI.value = iso(now);
+  const max = new Date(now); max.setMonth(max.getMonth() + 3); dateI.max = iso(max);
+  $('#ticketNo').textContent = String(Math.floor(1000 + Math.random() * 9000));
+
+  const service = () => $('input[name="service"]:checked', form);
+  const fillSlots = () => {
+    const s = service(), from = +s.dataset.from, to = +s.dataset.to;
+    const prev = timeS.value;
+    const isToday = dateI.value === iso(new Date());
+    const cur = new Date().getHours() + new Date().getMinutes() / 60;
+    const slots = [];
+    for (let t = from; t <= to; t += .5) {
+      if (isToday && t < cur + .5) continue;
+      slots.push(`${pad(Math.floor(t))}:${t % 1 ? '30' : '00'}`);
+    }
+    timeS.innerHTML = slots.length ? slots.map(v => `<option${v === prev ? ' selected' : ''}>${v}</option>`).join('')
+      : '<option value="">Complet pour aujourd’hui · choisissez une autre date</option>';
+    timeS.disabled = !slots.length;
+    // Plus de créneau aujourd'hui pour ce service : on propose le lendemain
+    if (!slots.length && isToday) {
+      const t = new Date(); t.setDate(t.getDate() + 1); dateI.value = iso(t);
+      return fillSlots();
+    }
+    summarize();
+  };
+  const summarize = () => {
+    const d = dateI.value ? new Date(dateI.value + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }) : '—';
+    const g = +guests.value || 1;
+    $('#summary').innerHTML = `<span class="text-creme">${service().value}</span> · ${g} pers. · ${d}${timeS.value ? ' à ' + timeS.value : ''}`;
+  };
+  $$('input[name="service"]', form).forEach(r => r.addEventListener('change', fillSlots));
+  dateI.addEventListener('change', fillSlots);
+  timeS.addEventListener('change', summarize);
+  guests.addEventListener('input', summarize);
+  $$('[data-step]', form).forEach(b => b.addEventListener('click', () => {
+    guests.value = Math.min(80, Math.max(1, (+guests.value || 1) + +b.dataset.step));
+    if (+guests.value > 12) { $('input[value="Événement / Soirée Live"]').checked = true; fillSlots(); }
+    summarize();
+  }));
+  $$('[data-service]').forEach(a => a.addEventListener('click', () => {
+    const r = $(`input[value="${a.dataset.service}"]`); if (r) { r.checked = true; fillSlots(); }
+  }));
+  $$('input[name="service"]', form)[h < 11 ? 0 : h < 14.5 ? 1 : h < 19 ? 2 : 3].checked = true;
+  fillSlots();
+
+  const setErr = (el, bad) => { el.setAttribute('aria-invalid', bad); $('#' + el.id + '-err').classList.toggle('hidden', !bad); };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = $('#name'), phone = $('#phone');
+    const digits = phone.value.replace(/\D/g, '');
+    const badName = name.value.trim().length < 2;
+    const badPhone = !(digits.length === 10 || (digits.length >= 11 && digits.length <= 13));
+    setErr(name, badName); setErr(phone, badPhone);
+    if (!timeS.value) { timeS.focus(); return; }
+    if (badName) return name.focus();
+    if (badPhone) return phone.focus();
+
+    const d = new Date(dateI.value + 'T12:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    const lines = [
+      '🍽 *Nouvelle demande de réservation – L’Amuse Bouche*',
+      '',
+      `• Service : ${service().value}`,
+      `• Personnes : ${guests.value}`,
+      `• Date : ${d}`,
+      `• Créneau : ${timeS.value}`,
+      `• Nom : ${name.value.trim()}`,
+      `• Téléphone : ${phone.value.trim()}`,
+    ];
+    const notes = $('#notes').value.trim();
+    if (notes) lines.push(`• Demandes particulières : ${notes}`);
+    lines.push('', `Réf. ${$('#ticketNo').textContent}`);
+    const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`;
+    const w = window.open(url, '_blank');
+    if (w) w.opener = null; else location.href = url;
+  });
+})();
+</script>
+</body>
+</html>
